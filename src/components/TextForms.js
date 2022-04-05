@@ -19,6 +19,19 @@ export default function TextForms(props) {
      setText(newText);
  
    }
+  //  const handleSortClick =()=>{
+    
+  //   let newText=text;
+  //   newText.split('').sort();
+  //   setText(newText);
+
+  // }
+    const handleClearClick =()=>{
+    
+     let newText='';
+     setText(newText);
+ 
+   }
   const handleOnChange =(event)=>{
    // console.log("OnChange");
     setText(event.target.value)
@@ -34,9 +47,13 @@ export default function TextForms(props) {
         </div>
         <button className='btn btn-primary mx-1' onClick={handleUpClick} >Convert to uppercase</button>
         <button className='btn btn-primary mx-1' onClick={handleLowerClick} >Convert to lowercase</button>
+        {/* <button className='btn btn-primary mx-1' onClick={handleSortClick} >Sort Text</button> */}
+        <button className='btn btn-primary mx-1' onClick={handleClearClick} >Clear</button>
+       
+
     </div>
     <div className='container my-3'>
-      <p><h2>Your Text Summery</h2></p>
+      <h2>Your Text Summery</h2>
       <p>{text.split(" ").length} words and {text.length} character</p>
       <p>{0.008*text.split(" ").length} minutes read</p>
       <p>Preview</p>
