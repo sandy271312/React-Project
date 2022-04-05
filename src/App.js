@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './components/ Navbar';
-import About from './components/About';
+//import About from './components/About';
 import TextForms from './components/TextForms'
 export function App() {
   return (

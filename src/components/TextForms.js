@@ -19,13 +19,13 @@ export default function TextForms(props) {
      setText(newText);
  
    }
-  //  const handleSortClick =()=>{
-    
-  //   let newText=text;
-  //   newText.split('').sort();
-  //   setText(newText);
-
-  // }
+  
+  const handleCopyClick =()=>{
+   
+     var copyText=document.getElementById('myBox');
+     copyText.select();
+     navigator.clipboard.writeText(copyText.value);
+   }
     const handleClearClick =()=>{
     
      let newText='';
@@ -37,6 +37,7 @@ export default function TextForms(props) {
     setText(event.target.value)
 
   }
+
   const [text, setText] = useState('');
   return (
     <>
@@ -47,8 +48,15 @@ export default function TextForms(props) {
         </div>
         <button className='btn btn-primary mx-1' onClick={handleUpClick} >Convert to uppercase</button>
         <button className='btn btn-primary mx-1' onClick={handleLowerClick} >Convert to lowercase</button>
-        {/* <button className='btn btn-primary mx-1' onClick={handleSortClick} >Sort Text</button> */}
+        <button className='btn btn-primary mx-1' onClick={handleCopyClick} >Copy Text</button>
         <button className='btn btn-primary mx-1' onClick={handleClearClick} >Clear</button>
+
+        
+
+        
+
+        {/* <button className='btn btn-primary mx-1' onClick={handleSortClick} >Sort Text</button> */}
+ 
        
 
     </div>
