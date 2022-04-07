@@ -27,11 +27,12 @@ const togglemode=()=>{
       setAlert({
               msg:message,
               type:type
-      })
+      });
+      
         setTimeout(()=>{
           setAlert(null);
-        },1500 );
-   }
+        },2000);
+  }
       
 
   return (
