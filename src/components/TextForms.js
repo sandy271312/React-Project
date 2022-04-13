@@ -54,10 +54,11 @@ export default function TextForms(props) {
   const [text, setText] = useState('');
   return (
     <>
-    <div className='container' style={{color:props.mode==='dark'?'white':'#42743'}}>
-        <h2>{props.heading}</h2>
+    <div className='container' style={{color:props.mode==='dark'?'white':'black'}}>
+       
         <div className="mb-3">
-        <textarea className="form-control" id="myBox" value={text} onChange={handleOnChange} rows="8"style={{backgroundColor:props.mode==='dark'?'grey':'white',color:props.mode==='dark'?'white':'#042743'}}></textarea>
+        <h2>{props.heading}</h2>
+        <textarea className="form-control" id="myBox" value={text} onChange={handleOnChange} rows="8"></textarea>
         </div>
         <button className='btn btn-primary mx-1' onClick={handleUpClick} >Convert to uppercase</button>
         <button className='btn btn-primary mx-1' onClick={handleLowerClick} >Convert to lowercase</button>
@@ -74,7 +75,7 @@ export default function TextForms(props) {
        
 
     </div>
-    <div className='container my-3'style={{color:props.mode==='dark'?'white':'#42743'}}>
+    <div className='container my-3' style={{color:props.mode==='dark'?'white':'black'}} >
       <h2>Your Text Summery</h2>
       <p>{text.length>0?text.split(" ").length:0} words and {text.length} character</p>
       <p>{0.008*text.split(" ").length} minutes read</p>

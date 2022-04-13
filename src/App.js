@@ -19,7 +19,9 @@ const togglemode=()=>{
 
       else{ 
          setMode('light')
-           document.body.style.backgroundColor='white';
+         document.body.style.backgroundColor='white';
+
+        // document.style.visibility="visible";
            showAlert("Light Mode has been enabled","success");
            //document.title="TextUtlis-Light Mode";//to change the title of textutils while enabling the light mode, currently I am not going to use this feature.
         
