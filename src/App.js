@@ -1,9 +1,9 @@
 import React,{useState} from 'react';
 import Navbar from './components/ Navbar';
-import About from './components/About';
+//import About from './components/About';
 import Alert from './components/Alert';
 import TextForms from './components/TextForms';
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+//import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 
 // import {
@@ -52,7 +52,8 @@ const togglemode=()=>{
       {/* <Navbar /> */}
       <Navbar title="textUtils" mode={mode} togglemode={togglemode} about="About" />
       <Alert alert={alert}/>
-      <Router>
+      <TextForms showAlert={showAlert} heading="Enter text to Analyze below" mode={mode} />
+      {/* <Router>
    <div className="container">
            <Routes>
            <Route exact path="/" element={<TextForms showAlert={showAlert} heading="Enter text to Analyze below" mode={mode} /> }>
@@ -62,7 +63,7 @@ const togglemode=()=>{
             
           </Routes>
         </div>
-        </Router>
+        </Router> */}
           
     </>
   );
