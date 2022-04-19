@@ -1,10 +1,10 @@
 import React,{useState} from 'react'
 
 export default function About() {
-    const [btnText,setBtnText]=useState("Enable light Mode")
+    const [btnText,setBtnText]=useState("Enable Dark Mode")
     const [myStyle, setMyStyle]=useState({
-                                          color:'white',
-                                          backgroundColor:'black',
+                                          color:'black',
+                                          backgroundColor:'white',
                                           border :'1px solid white'
     })
     
@@ -75,7 +75,7 @@ export default function About() {
 </div>
 
   <div className='container my-2'>
-  <button className='btn btn-primary mx-2' onClick={toogleStyle} >{btnText}</button>
+  <button className='btn btn-primary' onClick={toogleStyle} >{btnText}</button>
   </div>
   </div>
   )
