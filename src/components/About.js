@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 
 export default function About() {
-    const [btnText,setBtnText]=useState("Enable Dark Mode")
+    const [btnText,setBtnText]=useState("Enable light Mode")
     const [myStyle, setMyStyle]=useState({
                                           color:'white',
                                           backgroundColor:'black',
