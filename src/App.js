@@ -53,13 +53,13 @@ const togglemode=()=>{
       
       {/* <TextForms showAlert={showAlert} heading="Enter text to Analyze below" mode={mode} /> */}
       <Router>
-      <Navbar title="textUtils" mode={mode} togglemode={togglemode} about="About" />
+      <Navbar title="TextUtils" mode={mode} togglemode={togglemode} about="About" />
       <Alert alert={alert}/>
    <div className="container">
            <Routes>
            <Route exact path="/" element={<TextForms showAlert={showAlert} heading="Enter text to Analyze below" mode={mode} /> }>
             </Route>
-            <Route exact path="/about" element={<About />}>
+            <Route exact path="/about" element={<About mode={mode}/>}>
             </Route>
             
           </Routes>

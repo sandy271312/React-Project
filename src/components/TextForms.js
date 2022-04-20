@@ -60,11 +60,11 @@ export default function TextForms(props) {
         <h2>{props.heading}</h2>
         <textarea className="form-control" id="myBox" value={text} onChange={handleOnChange} rows="8"></textarea>
         </div>
-        <button className='btn btn-primary mx-1' onClick={handleUpClick} >Convert to uppercase</button>
-        <button className='btn btn-primary mx-1' onClick={handleLowerClick} >Convert to lowercase</button>
-        <button className='btn btn-primary mx-1' onClick={handleCopyClick} >Copy Text</button>
-        <button className='btn btn-primary mx-1' onClick={handleExtraSpaceClick} >Remove Extra spaces</button>
-        <button className='btn btn-primary mx-1' onClick={handleClearClick} >Clear</button>
+        <button className='btn btn-primary mx-1 my-1' onClick={handleUpClick} >Convert to uppercase</button>
+        <button className='btn btn-primary mx-1 my-1' onClick={handleLowerClick} >Convert to lowercase</button>
+        <button className='btn btn-primary mx-1 my-1' onClick={handleCopyClick} >Copy Text</button>
+        <button className='btn btn-primary mx-1 my-1' onClick={handleExtraSpaceClick} >Remove Extra spaces</button>
+        <button className='btn btn-primary mx-1 my-1' onClick={handleClearClick} >Clear</button>
 
         
 
@@ -77,8 +77,8 @@ export default function TextForms(props) {
     </div>
     <div className='container my-3' style={{color:props.mode==='dark'?'white':'black'}} >
       <h2>Your Text Summery</h2>
-      <p>{text.length>0?text.split(" ").length:0} words and {text.length} character</p>
-      <p>{0.008*text.split(" ").length} minutes read</p>
+      <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} character</p>
+      <p>{0.008*text.split(" ").filter((element)=>{return element.length!==0}).length} minutes read</p>
       <h2>Preview</h2>
       <>{text.length>0 ? text:"Enter something into the text box above to perview it here"}</>
 
