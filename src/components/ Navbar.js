@@ -3,6 +3,10 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 //import { BrowserRouter as Router, Li, Linknk } from "react-router-dom";
 
+// const toogleMode=(cls)=>{
+//   document.body.classList.add('bg-'+cls)
+
+// }
 export default function  Navbar(props) {
   return (
  
@@ -21,12 +25,17 @@ export default function  Navbar(props) {
             <Link className="navbar-brand" to="/about">{props.about}</Link>
           </li>
         </ul>
-        {/* <form className="d-flex">
-          <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-          <button className="btn btn-outline-success" type="submit">Search</button>
-        </form> */}
+        {/* <div className='d-flex'>
+          <div className="bg-primary rounded mx-2" onClick={()=>{props.togglemode('primary')}} style={{height:'30px',width:'20px'}}></div>
+          <div className="bg-primary rounded mx-2" onClick={()=>{props.togglemode('success')}} style={{height:'30px',width:'20px'}}></div>
+          <div className="bg-primary rounded mx-2" onClick={()=>{props.togglemode('danger')}} style={{height:'30px',width:'20px'}}></div>
+          <div className="bg-primary rounded mx-2" onClick={()=>{props.togglemode('warning')}} style={{height:'30px',width:'20px'}}></div>
+          <div className="bg-primary rounded mx-2" onClick={()=>{props.togglemode('light')}} style={{height:'30px',width:'20px'}}></div>
+          <div className="bg-primary rounded mx-2" onClick={()=>{props.togglemode('dark')}} style={{height:'30px',width:'20px'}}></div>
+        </div> */}
+
         <div className={`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
-          <input className="form-check-input" type="checkbox" onClick={props.togglemode} role="switch" id="flexSwitchCheckDefault"/>
+          <input className="form-check-input" type="checkbox"onClick={props.togglemode} role="switch" id="flexSwitchCheckDefault"/>
           <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable Dark Mode</label>
         </div>
       </div>
